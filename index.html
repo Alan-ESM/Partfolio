@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Essomba Ayissi Alan Robertson, analyste cybersécurité junior. Cybersécurité, réseaux, systèmes, développement web et logiciel, gestion des risques.">
+    <meta name="keywords" content="portfolio, analyste cybersécurité junior, junior cybersecurity analyst, cybersécurité, réseaux, Kali Linux, Metasploit, Nmap, développement web, Java, PHP, JavaScript, KEYCE Academy, Cameroun, Alan-ESM, Essomba Ayissi Alan Robertson">
+    <meta name="author" content="Essomba Ayissi Alan Robertson">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Portfolio - Essomba Ayissi Alan Robertson">
+    <meta property="og:description" content="Analyste cybersécurité junior | Junior cybersecurity analyst.">
+    <meta property="og:type" content="website">
+    <title>Portfolio - Essomba Ayissi Alan Robertson</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="1.jpg">
+</head>
+<body>
+    <video autoplay muted loop playsinline preload="auto" id="bgVideo">
+        <source src="2.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <nav id="navbar">
+        <ul class="nav-links">
+            <li><a href="#apropos">À Propos</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <header>
+        <div class="profile-container">
+            <img src="3.jpg" alt="Photo de profil d'Essomba Ayissi Alan Robertson" class="profile-pic">
+        </div>
+        <div class="header-content">
+            <div class="header-tag">
+                <span lang="fr">Analyste Cybersécurité Junior</span>
+                <span class="sep">/</span>
+                <span lang="en">Junior Cybersecurity Analyst</span>
+            </div>
+            <h1>Essomba Ayissi<br><span class="accent-name">Alan Robertson</span></h1>
+            <h2>Étudiant en Informatique</h2>
+            <div class="school-info">
+                <div class="school-badge">
+                    <i class="fas fa-university"></i>
+                    <div><span class="badge-label">École</span><span class="badge-value">KEYCE Academy</span></div>
+                </div>
+                <div class="school-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div><span class="badge-label">Filière</span><span class="badge-value">RSI — Bachelor</span></div>
+                </div>
+                <div class="school-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div><span class="badge-label">Localisation</span><span class="badge-value">Cameroun</span></div>
+                </div>
+            </div>
+            <div class="header-cta">
+                <a href="#projets" class="btn btn-solid">Voir mes projets</a>
+                <a href="#contact" class="btn">Me contacter</a>
+                <a href="Essomba%20ayissi%20AlanCV-FR.pdf" download class="btn btn-ice"><i class="fas fa-download"></i> CV Français</a>
+                <a href="Essomba%20ayissi%20AlanCV-ENG.pdf" download class="btn btn-ice"><i class="fas fa-download"></i> CV English</a>
+            </div>
+        </div>
+        <a class="scroll-indicator" href="#apropos" aria-label="Défiler">
+            <span>Défiler</span>
+            <i></i>
+        </a>
+    </header>
+
+    <main>
+        <section id="apropos">
+            <div class="section-label">01 / À Propos</div>
+            <div class="apropos-grid">
+                <div class="apropos-text-block">
+                    <h2>À propos de moi</h2>
+                    <p>Je m'appelle <strong>Essomba Ayissi Alan Robertson</strong>, étudiant passionné en informatique, orienté cybersécurité, réseaux et développement. Basé au Cameroun, je conçois des solutions numériques fiables alliant sécurité, esthétique moderne et fonctionnalité robuste.</p>
+                    <p>Mon parcours à <strong>KEYCE Academy</strong> en filière <strong>RSI</strong> m'a permis de développer une maîtrise solide des systèmes, des réseaux, de la cybersécurité et des technologies front-end et back-end.</p>
+                    <p>Je suis animé par la curiosité technologique, l'amour du code propre et le désir de résoudre des problèmes complexes avec des outils adaptés.</p>
+                </div>
+                <div class="apropos-stats">
+                    <div class="stat-card hud"><span class="stat-number" id="skillTotal" data-target="0">0</span><span class="stat-label">Outils &amp; technologies</span></div>
+                    <div class="stat-card hud"><span class="stat-number" id="projectTotal" data-target="0">0</span><span class="stat-label">Projets réalisés</span></div>
+                    <div class="stat-card hud"><span class="stat-number" data-target="2">0</span><span class="stat-label">Années d'expérience</span></div>
+                    <div class="stat-card hud"><span class="stat-number" data-target="100">0</span><span class="stat-label">% Passionné</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences">
+            <div class="section-label">02 / Compétences</div>
+            <h2>Compétences Techniques</h2>
+            <p class="section-intro">Outils, technologies et méthodes que j'utilise, organisés par domaine d'expertise.</p>
+            <div class="skills-layout">
+                <div class="skills-grid" id="skillsGrid"></div>
+                <aside class="skill-panel hud" id="skillPanel" aria-live="polite">
+                    <div class="panel-empty"><p>Choisissez un domaine ou un outil pour lire son explication.</p></div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="projets">
+            <div class="section-label">03 / Projets</div>
+            <h2>Projets Réalisés</h2>
+            <div class="projects-container" id="projectsGrid"></div>
+        </section>
+
+        <section id="contact">
+            <div class="section-label">04 / Contact</div>
+            <h2>Me Contacter</h2>
+            <div class="contact-grid">
+                <div class="contact-card hud">
+                    <i class="fas fa-phone"></i>
+                    <div><span class="contact-label">Orange</span><a href="tel:+237656166093">+237 656 166 093</a></div>
+                </div>
+                <div class="contact-card hud">
+                    <i class="fas fa-phone"></i>
+                    <div><span class="contact-label">MTN</span><a href="tel:+237652091672">+237 652 09 16 72</a></div>
+                </div>
+                <div class="contact-card hud">
+                    <i class="fas fa-envelope"></i>
+                    <div><span class="contact-label">Email</span><a href="mailto:alanessomba0@gmail.com">alanessomba0@gmail.com</a></div>
+                </div>
+                <div class="contact-card hud">
+                    <i class="fab fa-linkedin"></i>
+                    <div><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/alan-essomba-ayissi" target="_blank" rel="noopener">Alan Essomba Ayissi</a></div>
+                </div>
+                <div class="contact-card hud">
+                    <i class="fab fa-github"></i>
+                    <div><span class="contact-label">GitHub</span><a href="https://github.com/Alan-ESM.git" target="_blank" rel="noopener">Alan-ESM</a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-brand">ESM<span>.</span></div>
+        <p>© 2026 Essomba Ayissi Alan Robertson — KEYCE Academy</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
