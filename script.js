@@ -131,6 +131,7 @@ document.getElementById('projectsGrid').innerHTML = projects.map((p, i) =>
 ).join('');
 
 document.getElementById('skillTotal').dataset.target = skills.reduce((n, c) => n + c.s.length, 0);
+document.getElementById('domainTotal').dataset.target = skills.length;
 document.getElementById('projectTotal').dataset.target = projects.length;
 
 const navbar = document.getElementById('navbar');
@@ -150,7 +151,7 @@ const animateCounters = () => {
     const els = [...document.querySelectorAll('.stat-number')];
     const start = performance.now();
     const tick = now => {
-        const p = Math.min((now - start) / 1600, 1);
+        const p = Math.min((now - start) / 2200, 1);
         const e = 1 - (1 - p) ** 3;
         els.forEach(el => el.textContent = Math.round(el.dataset.target * e));
         if (p < 1) requestAnimationFrame(tick);
@@ -177,3 +178,33 @@ const spy = new IntersectionObserver(entries => entries.forEach(({ isIntersectin
 }), { rootMargin: '-45% 0px -50% 0px' });
 
 sections.forEach(s => spy.observe(s));
+
+const vids = [...document.querySelectorAll('.bg-video')];
+const FADE = 1200;
+let cur = 0;
+let busy = false;
+
+const crossfade = () => {
+    if (busy) return;
+    busy = true;
+    const a = vids[cur];
+    const b = vids[1 - cur];
+    a.classList.remove('top');
+    b.currentTime = 0;
+    b.classList.add('top');
+    b.play().then(() => b.classList.add('on')).catch(() => {});
+    setTimeout(() => {
+        a.classList.remove('on');
+        a.pause();
+        a.currentTime = 0;
+        cur = 1 - cur;
+        busy = false;
+    }, FADE + 150);
+};
+
+vids.forEach((v, i) => {
+    v.addEventListener('timeupdate', () => {
+        if (i === cur && v.duration && v.duration - v.currentTime <= FADE / 1000 + 0.4) crossfade();
+    });
+    v.addEventListener('ended', () => i === cur && crossfade());
+});
